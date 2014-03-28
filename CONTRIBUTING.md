@@ -50,8 +50,8 @@ where `ENGINE` is either of:
 To avoid test duplication for common features, use the following rules:
 
 - if file `tests/extensions/ENGINE/FEATURE.md` is empty or not present, use `tests/extensions/FEATURE.md` instead
-- if file `tests/extensions/ENGINE/FEATURE.out` not present, use `tests/extensions/FEATURE.out` instead
-- for a given `ENGINE`, only features which have either a `.md` or a `.out` are implemented by that engine.
+- if file `tests/extensions/ENGINE/FEATURE.html` not present, use `tests/extensions/FEATURE.html` instead
+- for a given `ENGINE`, only features which have either a `.md` or a `.html` are implemented by that engine.
 - in case of different outputs for a single feature input, keep directly under `extensions/` only the output case that happens across the most engines
 
 **version**
@@ -74,7 +74,7 @@ GFM and the "fenced code block" use the following file structure:
 
     tests/extensions/gfm/README.markdown
     tests/extensions/gfm/fenced-code-block.md
-    tests/extensions/gfm/fenced-code-block.out
+    tests/extensions/gfm/fenced-code-block.html
 
 where `README.markdown` contains:
 
@@ -84,14 +84,14 @@ To avoid duplication with other engines, if the input / output (normalized to DO
 
     tests/extensions/gfm/fenced-code-block.md       [empty]
     tests/extensions/fenced-code-block.md
-    tests/extensions/fenced-code-block.out
+    tests/extensions/fenced-code-block.html
 
 If the input is the same, and outputs are DOM different, but represent the same idea (e.g. both represent computer code) use:
 
     tests/extensions/gfm/fenced-code-block.md       [empty]
-    tests/extensions/gfm/fenced-code-block.out
+    tests/extensions/gfm/fenced-code-block.html
     tests/extensions/fenced-code-block.md
-    tests/extensions/fenced-code-block.out
+    tests/extensions/fenced-code-block.html
 
 #### New Extensions
 

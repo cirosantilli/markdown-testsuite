@@ -22,7 +22,7 @@ except IOError:
 # Encoding of all out outputs when we can chose it, hopefully equal to most inputs.
 encoding = 'utf-8'
 in_ext = u".md"
-out_ext = u".out"
+out_ext = u".html"
 test_dir = u"tests"
 engines_dir = os.path.join(test_dir, u"extensions")
 
@@ -41,7 +41,7 @@ def io_iterator():
 
     Each yield returns a 3-tuple `(path, input, output)` where:
 
-    - `path` is the path of the test relative to the `test_dir` and without engine (`.md` or `.out`).
+    - `path` is the path of the test relative to the `test_dir` and without engine (`.md` or `.html`).
     - `input` and `output` are the content of the input and output files.
     """
     for basename in sorted(os.listdir(test_dir)):
