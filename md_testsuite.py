@@ -31,9 +31,18 @@ import sys
 reload(sys)
 sys.setdefaultencoding(encoding)
 
-def same_basename_on_parent(path):
-    path_split = path.split(os.sep)
-    return os.sep.join(path_split[0:-2] + [path_split[-1]])
+class IO(objct):
+    def __init__(self, label, input, output, *engines):
+        self.label = label
+        self.input = input
+        self.output = output
+        if engines:
+            self.engines = engines
+        else:
+            engines = all_engines()
+    def all_engines
+    def get_output():
+        return self.engines
 
 def io_iterator():
     """
